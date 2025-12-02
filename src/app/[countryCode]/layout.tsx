@@ -14,8 +14,8 @@ import { CartProvider } from "@/providers/CartProvider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Online gram altın",
-  description: "Online gram altın",
+  title: "Kmint Shop",
+  description: "Kmint Shop",
   icons: {
     icon: "/logo/icon.svg",
   },

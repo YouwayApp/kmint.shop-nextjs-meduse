@@ -3,8 +3,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hesap Paneli | Online gram online E-ticaret şablonu",
-  description: "Bu NextCommerce Şablonu için Hesap Paneli sayfasıdır",
+  title: "Hesap Paneli | Kmint Shop online E-ticaret şablonu",
+  description: "Kmint Shopiçin Hesap Paneli sayfasıdır",
 };
 
 const AccountPage = () => {

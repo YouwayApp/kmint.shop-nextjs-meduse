@@ -3,8 +3,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Şifremi Unuttum | Online gram online E-ticaret şablonu",
-  description: "Bu NextCommerce Şablonu için Şifremi Unuttum Sayfasıdır",
+  title: "Şifremi Unuttum | Kmint Shop online E-ticaret şablonu",
+  description: "Kmint Shopiçin Şifremi Unuttum Sayfasıdır",
 };
 
 const ForgotPasswordPage = () => {

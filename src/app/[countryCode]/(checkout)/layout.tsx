@@ -32,7 +32,7 @@ export default function CheckoutLayout({
           >
             <img
               src="/logo/logo-text.svg"
-              alt="Online Gram Altın"
+              alt="Kmint Shop"
               className="w-auto h-6"
             />
           </LocalizedClientLink>

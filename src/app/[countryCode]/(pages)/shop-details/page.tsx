@@ -3,8 +3,8 @@ import ShopDetails from "@/components/ShopDetails";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mağaza Detayları Sayfası | Online gram online E-ticaret şablonu",
-  description: "Bu NextCommerce Şablonu için Mağaza Detayları Sayfasıdır",
+  title: "Mağaza Detayları Sayfası | Kmint Shop online E-ticaret şablonu",
+  description: "Kmint Shopiçin Mağaza Detayları Sayfasıdır",
   // other metadata
 };
 

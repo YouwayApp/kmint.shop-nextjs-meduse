@@ -7,7 +7,7 @@ import { getRegion } from "@lib/data/regions";
 import { retrieveCustomer } from "@lib/data/customer";
 
 export const metadata: Metadata = {
-  title: "Adresler | Online gram online E-ticaret şablonu",
+  title: "Adresler | Kmint Shop online E-ticaret şablonu",
   description: "",
 };
 

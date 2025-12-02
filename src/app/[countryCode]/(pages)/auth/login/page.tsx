@@ -3,8 +3,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Giriş | Online gram online E-ticaret şablonu",
-  description: "Bu NextCommerce Şablonu için Giriş Sayfasıdır",
+  title: "Giriş | Kmint Shop online E-ticaret şablonu",
+  description: "Kmint Shopiçin Giriş Sayfasıdır",
 };
 
 const LoginPage = () => {

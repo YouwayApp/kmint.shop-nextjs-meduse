@@ -3,8 +3,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Şifre Sıfırla | Online gram online E-ticaret şablonu",
-  description: "Bu NextCommerce Şablonu için Şifre Sıfırlama Sayfasıdır",
+  title: "Şifre Sıfırla | Kmint Shop online E-ticaret şablonu",
+  description: "Kmint Shopiçin Şifre Sıfırlama Sayfasıdır",
 };
 
 const ResetPasswordPage = () => {

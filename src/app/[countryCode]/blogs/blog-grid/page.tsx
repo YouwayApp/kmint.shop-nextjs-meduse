@@ -3,8 +3,8 @@ import BlogGrid from "@/components/BlogGrid";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Blog Grid Sayfası | Online gram online E-ticaret şablonu",
-  description: "Bu NextCommerce Şablonu için Blog Grid Sayfasıdır",
+  title: "Blog Grid Sayfası | Kmint Shop online E-ticaret şablonu",
+  description: "Kmint Shopiçin Blog Grid Sayfasıdır",
   // other metadata
 };
 

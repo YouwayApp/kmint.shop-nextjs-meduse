@@ -3,8 +3,8 @@ import Error from "@/components/Error";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Hata Sayfası | Online gram online",
-  description: "Online gram online",
+  title: "Hata Sayfası | Kmint Shop online",
+  description: "Kmint Shop online",
   // other metadata
 };
 

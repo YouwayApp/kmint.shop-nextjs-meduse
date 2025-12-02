@@ -5,8 +5,8 @@ import FAQContent from "@/modules/faq/components/faq-content";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sıkça Sorulan Sorular | Online gram online",
-  description: "Online gram online",
+  title: "Sıkça Sorulan Sorular | Kmint Shop online",
+  description: "Kmint Shop online",
   // other metadata
 };
 
