@@ -31,7 +31,7 @@ const Navigation: React.FC<NavigationProps> = ({
     <div
       className={`w-[288px] absolute right-4 top-full xl:static xl:w-auto h-0 xl:h-auto invisible xl:visible xl:flex items-center justify-between ${
         navigationOpen &&
-        `!visible bg-white shadow-lg border border-gray-3 !h-auto max-h-[400px] overflow-y-scroll rounded-md p-5`
+        `!visible bg-white shadow-lg border border-gray-3 !h-auto max-h-[400px] overflow-y-scroll p-5`
       }`}
     >
       {/* Main Nav Start */}
@@ -43,7 +43,7 @@ const Navigation: React.FC<NavigationProps> = ({
             ) : (
               <li
                 key={i}
-                className="group relative before:w-0 before:h-[3px] before:bg-blue before:absolute before:left-0 before:top-0 before:rounded-b-[3px] before:ease-out before:duration-200 hover:before:w-full "
+                className="group relative before:w-0 before:h-[3px] before:bg-blue before:absolute before:left-0 before:top-0 before:ease-out before:duration-200 hover:before:w-full "
               >
                 <LocalizedClientLink
                   href={menuItem.path}

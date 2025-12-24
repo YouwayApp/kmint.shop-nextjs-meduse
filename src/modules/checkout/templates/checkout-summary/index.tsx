@@ -12,7 +12,16 @@ const CheckoutSummary = ({ cart }: { cart: any }) => {
       <div className="w-full bg-white flex flex-col">
         {/* Price Refresh Timer */}
         <div className="mb-6">
-          <PriceRefreshTimer intervalMinutes={3} />
+          <PriceRefreshTimer
+            intervalMinutes={3}
+            textColor="text-dark"
+            iconColor="text-blue"
+            timeColor="text-blue"
+            buttonColor="text-blue"
+            buttonHoverColor="hover:text-blue-dark"
+            backgroundColor="bg-gray-1"
+            borderColor="border-gray-3"
+          />
         </div>
         <Heading
           level="h2"

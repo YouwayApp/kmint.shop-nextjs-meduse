@@ -6,23 +6,17 @@ const PromoBanner = () => {
   return (
     <section className="overflow-hidden py-20">
       <div className="max-w-[1170px]  w-full mx-auto px-4 sm:px-8 xl:px-0">
-        {/* <!-- promo banner big --> */}
-        <div className="relative z-1 overflow-hidden rounded-lg bg-[#F5F5F7]  mb-7.5">
-          <LocalizedClientLink href="/categories/gram-kulce-altin">
-            <img src="/banners/new/8.png" alt=" " />
-          </LocalizedClientLink>
-        </div>
         {/* <!-- 2 banner gird --> */}
         <div className="grid gap-4 sm:gap-7.5 grid-cols-2 lg:grid-cols-2">
           {/* <!-- promo banner small --> */}
-          <div className="relative z-1 overflow-hidden rounded-lg bg-[#DBF4F3] ">
+          <div className="relative z-1 overflow-hidden bg-[#DBF4F3] ">
             <LocalizedClientLink href="/categories/gumus">
               <img src="/banners/new/7.png" alt=" " />
             </LocalizedClientLink>
           </div>
 
           {/* <!-- promo banner small --> */}
-          <div className="relative z-1 overflow-hidden rounded-lg bg-[#FFECE1]">
+          <div className="relative z-1 overflow-hidden bg-[#FFECE1]">
             <LocalizedClientLink href="/categories/gram-kulce-altin">
               <img src="/banners/new/9.png" alt=" " />
             </LocalizedClientLink>

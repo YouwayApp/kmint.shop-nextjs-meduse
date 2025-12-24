@@ -254,7 +254,7 @@ const Payment = ({
         <Heading
           level="h2"
           className={clx(
-            "flex flex-row text-3xl-regular gap-x-2 items-baseline",
+            "flex flex-row text-lg sm:text-xl font-semibold text-dark gap-x-2 items-baseline",
             {
               "opacity-50 pointer-events-none select-none":
                 !shouldShowOpen && !paymentReady,

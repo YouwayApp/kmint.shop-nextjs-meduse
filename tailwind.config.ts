@@ -15,6 +15,8 @@ const config: Config = {
   theme: {
     fontFamily: {
       'euclid-circular-a': ['Euclid Circular A'],
+      domine: ['var(--font-domine)', 'serif'],
+      sans: ['var(--font-domine)', 'serif'],
     },
     container: {
       center: true,

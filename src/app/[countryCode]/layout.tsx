@@ -12,6 +12,14 @@ import { SiteProvider } from "@/providers/SiteProvider";
 import { AuthProvider } from "@/providers/AuthProvider";
 import { CartProvider } from "@/providers/CartProvider";
 import { Metadata } from "next";
+import { Domine } from "next/font/google";
+
+const domine = Domine({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-domine",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Kmint Shop",
@@ -27,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="tr" suppressHydrationWarning={true}>
-      <body>
+    <html lang="tr" suppressHydrationWarning={true} className={domine.variable}>
+      <body className={domine.className}>
         <>
           <AuthProvider>
             <SiteProvider>

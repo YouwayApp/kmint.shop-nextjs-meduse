@@ -4,15 +4,23 @@ import Collections from "./Collections";
 import PromoBanner from "./PromoBanner";
 import Newsletter from "../Common/Newsletter";
 import PriceSlider from "../Global/PriceSlider/PriceSlider";
+import About from "./About";
+import Blog from "./Blog";
+import Divider from "../Common/Divider";
+import HeroFeature from "./Hero/HeroFeature";
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      <PriceSlider />
+      {/* <!-- Hero features --> */}
+      <HeroFeature />
+      <Divider />
       <Collections />
-      <PromoBanner />
-      <Newsletter />
+      <Divider />
+      <Blog />
+      <Divider />
+      <About />
     </main>
   );
 };

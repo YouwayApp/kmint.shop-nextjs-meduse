@@ -27,7 +27,7 @@ const MobileHeader = () => {
             {/* Menu Button - Left */}
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="p-2 hover:bg-gray-100 transition-colors"
               aria-label="Menüyü aç"
             >
               <Menu className="w-6 h-6 text-gray-700" />
@@ -41,7 +41,7 @@ const MobileHeader = () => {
             {/* Search Button - Right */}
             <button
               onClick={toggleSearch}
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="p-2 hover:bg-gray-100 transition-colors"
               aria-label={isSearchOpen ? "Aramayı kapat" : "Arama"}
             >
               {isSearchOpen ? (
@@ -78,7 +78,7 @@ const MobileHeader = () => {
                 <div className="text-xl font-bold text-blue">Kmint Shop</div>
                 <button
                   onClick={toggleMenu}
-                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="p-2 hover:bg-gray-100 transition-colors"
                   aria-label="Menüyü kapat"
                 >
                   <X className="w-6 h-6 text-gray-700" />

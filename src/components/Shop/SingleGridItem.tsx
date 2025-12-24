@@ -44,72 +44,123 @@ const SingleGridItem = ({ item, countryCode }: SingleGridItemProps) => {
   });
 
   return (
-    <div className="group">
-      <div className="relative overflow-hidden flex items-center justify-center rounded-lg bg-white shadow-1 min-h-[270px] mb-4">
-        <LocalizedClientLink href={`/products/${item.handle}`}>
+    <div className="group bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-gray-300">
+      {/* Product Image Container */}
+      <div className="relative overflow-hidden bg-gray-50 aspect-square">
+        <LocalizedClientLink
+          href={`/products/${item.handle}`}
+          className="block w-full h-full"
+        >
           {thumbnail ? (
-            <Image
-              src={thumbnail}
-              alt={item.title || "Product"}
-              width={250}
-              height={250}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={thumbnail}
+                alt={item.title || "Product"}
+                fill
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
           ) : (
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-400 text-sm">Resim Yok</span>
+            <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+              <span className="text-gray-400 text-sm font-medium">
+                Resim Yok
+              </span>
             </div>
           )}
         </LocalizedClientLink>
       </div>
 
-      <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1 text-center min-h-[1.5rem] flex items-center justify-center">
-        <LocalizedClientLink
-          href={`/products/${item.handle}`}
-          className="block truncate"
+      {/* Product Info */}
+      <div className="p-0 space-y-3">
+        {/* Product Title */}
+        <h3 className="font-semibold text-dark text-center text-sm sm:text-base leading-tight line-clamp-2 min-h-[2rem] group-hover:text-blue transition-colors duration-200">
+          <LocalizedClientLink
+            href={`/products/${item.handle}`}
+            className="block"
+          >
+            {item.title}
+          </LocalizedClientLink>
+        </h3>
+
+        {/* Price */}
+        <div className="flex items-center justify-center">
+          {cheapestPrice && (
+            <div className="text-lg font-bold text-dark">
+              <PreviewPrice price={cheapestPrice} />
+            </div>
+          )}
+        </div>
+
+        {/* Add to Cart Button */}
+        <button
+          onClick={handleAddToCart}
+          disabled={isAdding || !item.variants?.[0]?.id}
+          className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-blue hover:bg-blue-dark text-white font-semibold text-sm shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
         >
-          {item.title}
-        </LocalizedClientLink>
-      </h3>
-
-      <span className="flex items-center gap-2 font-medium text-md text-center justify-center min-h-[2.5rem]">
-        {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
-      </span>
-
-      <button
-        onClick={handleAddToCart}
-        disabled={isAdding || !item.variants?.[0]?.id}
-        className="w-full border mt-4 border-blue-dark flex items-center justify-center gap-2 py-2 px-4 bg-blue-600 text-blue-dark rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isAdding ? (
-          <>
-            <svg
-              className="animate-spin -ml-1 mr-2 h-4 w-4 text-blue-dark"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
+          {isAdding ? (
+            <>
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              <span>Ekleniyor...</span>
+            </>
+          ) : item.variants?.[0]?.id ? (
+            <>
+              <svg
+                className="w-5 h-5"
+                fill="none"
                 stroke="currentColor"
-                strokeWidth="4"
-              ></circle>
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path>
-            </svg>
-            Ekleniyor...
-          </>
-        ) : item.variants?.[0]?.id ? (
-          "Sepete Ekle"
-        ) : (
-          "Yakında Stokta"
-        )}
-      </button>
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              <span>Sepete Ekle</span>
+            </>
+          ) : (
+            <>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span>Yakında Stokta</span>
+            </>
+          )}
+        </button>
+      </div>
     </div>
   );
 };

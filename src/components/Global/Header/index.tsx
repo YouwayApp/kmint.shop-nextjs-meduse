@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import TopHeader from "./TopHeader";
 import HeaderTop from "./HeaderTop";
 import Navigation from "./Navigation";
 import NavRight from "./NavRight";
@@ -34,6 +35,9 @@ const Header = () => {
           stickyMenu && "shadow"
         }`}
       >
+        {/* Top Header */}
+        <TopHeader />
+
         <div className="max-w-[1170px]  mx-auto px-4 sm:px-7.5 xl:px-0">
           {/* Header top */}
           <HeaderTop stickyMenu={stickyMenu} />

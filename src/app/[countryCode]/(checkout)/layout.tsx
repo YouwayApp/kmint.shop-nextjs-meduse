@@ -1,5 +1,6 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import ChevronDown from "@modules/common/icons/chevron-down";
+import Image from "next/image";
 
 import "../../css/meduse/globals.css";
 
@@ -30,9 +31,11 @@ export default function CheckoutLayout({
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base "
             data-testid="store-link"
           >
-            <img
-              src="/logo/logo-text.svg"
+            <Image
+              src="/logo/logo.svg"
               alt="Kmint Shop"
+              width={100}
+              height={28}
               className="w-auto h-6"
             />
           </LocalizedClientLink>

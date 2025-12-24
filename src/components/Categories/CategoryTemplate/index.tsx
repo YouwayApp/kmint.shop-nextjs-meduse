@@ -10,8 +10,7 @@ import { Button, Select } from "@/components/UI";
 import { listProducts } from "@lib/data/products";
 import { SortOptions } from "@/components/Store/RefinementList";
 import Image from "next/image";
-import { strapi } from "@strapi/client";
-import { CategoryPage } from "@/types/strapi";
+
 import BreadcrumbWithMedia from "@/components/Common/BreadcrumbWithMedia";
 import { CategoryExtension } from "@/types/category";
 
@@ -121,14 +120,14 @@ export default function CategoryTemplate({
 
                 {/* Sub Categories */}
                 {category.category_children && (
-                  <div className="mb-6">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="mb-8">
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                       <li>
                         <LocalizedClientLink
                           href={`/categories/${rootCategory?.handle}`}
-                          className="block p-4  rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-dark hover:border-blue-300"
+                          className="group block p-4 sm:p-5 bg-white border-2 border-gray-3 hover:border-blue hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                         >
-                          <h4 className="font-medium text-blue-dark hover:text-blue-600 transition-colors">
+                          <h4 className="font-semibold text-base sm:text-lg text-dark group-hover:text-blue transition-colors text-center">
                             Tümü
                           </h4>
                         </LocalizedClientLink>
@@ -138,9 +137,9 @@ export default function CategoryTemplate({
                         <li key={c.id}>
                           <LocalizedClientLink
                             href={`/categories/${c.handle}`}
-                            className="block p-4  rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-dark hover:border-blue-300"
+                            className="group block p-4 sm:p-5 bg-white border-2 border-gray-3 hover:border-blue hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                           >
-                            <h4 className="font-medium text-blue-dark hover:text-blue-600 transition-colors">
+                            <h4 className="font-semibold text-base sm:text-lg text-dark group-hover:text-blue transition-colors text-center">
                               {c.name}
                             </h4>
                           </LocalizedClientLink>
