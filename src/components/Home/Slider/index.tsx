@@ -21,14 +21,8 @@ function SliderHome() {
 
   const slide = (image: string, title: string) => {
     return (
-      <div className="w-full min-h-[200px] h-full bg-blue ">
-        <Image
-          src={image}
-          alt={title}
-          width={1000}
-          height={1000}
-          className="w-full h-full object-cover"
-        />
+      <div className="w-full max-h-[574px] h-full bg-blue ">
+        <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
     );
   };
